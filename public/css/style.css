@@ -1,0 +1,27 @@
+/* app css stylesheet */
+/**{
+  border: 1px dashed green;
+}
+*/
+
+#header h1{
+  margin:auto;
+  text-align: center;
+  background-color: #333333;
+}
+
+#navbar{
+  margin: auto;
+}
+
+#leftMap{
+	width:75%;
+	float:left;
+}
+#rightControl{
+	width:20%;
+	float: right;
+}
+#footer{
+  clear:both;
+}

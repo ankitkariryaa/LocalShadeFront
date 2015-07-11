@@ -1,0 +1,28 @@
+{
+  "name": "LocalShade",
+  "version": "0.3.3",
+  "description": "A beautiful analysis of your city",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "~4.9.x",
+    "method-override": "~2.1.1",
+    "morgan": "~1.1.1",
+    "path": "^0.11.14"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ankitkariryaa/ankitkariryaa"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}

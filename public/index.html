@@ -1,0 +1,51 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Local Shade</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+
+    <!-- JS -->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <!--   <script src="http://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>   -->
+    <!-- ANGULAR CUSTOM -->
+    <script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
+    <script src="js/app.js"></script>
+
+  
+</head>
+<body ng-app="LocalShadeApp" >
+<div class="container">
+
+    <div id="header">
+        <h1>Local Shade</h1>
+    </div>
+    <div class="MainContent" ng-controller="GoogleMapController">
+        <div id="leftMap" > 
+               <map center="25.774252, -80.190262" zoom="{{MapZoom}}">
+                 <shape name="polygon" on-click="showArrays()" paths="[ [25.774252, -80.190262], [18.466465, -66.118292], [32.321384, -64.75737] ]" stroke-color="#FF0000" stroke-opacity="0.8" stroke-weight="2" fill-color="#FF0000" fill-opacity="0.35"> </shape>
+                 <shape name="polygon" on-click="showArrays()" paths="[ [0.774252, -80.190262], [18.466465, -66.118292], [32.321384, -64.75737] ]" stroke-color="#0000AA" stroke-opacity="0.1" stroke-weight="2" fill-color="#FF0000" fill-opacity="0.35"> </shape>
+               </map>
+        </div>
+        <div id="right"> 
+          <p>Here goes the control of the application</p>
+          <input type="text" name="mapCenter" placeholder="Search" ng-model="mapCenter"></input>
+          <!-- <button class="btn btn-active" ng-click="MapCenterSearch()"> 
+          Search
+          </button> -->
+          <p>{{MapZoom}}</p>
+        </div>
+    </div>
+    <div id="footer"><p>Footer</p></div>
+</div>
+
+<script src="js/GoogleMapController.js"></script>
+</body>
+</html>

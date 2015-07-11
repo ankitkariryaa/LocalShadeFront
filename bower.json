@@ -1,0 +1,12 @@
+{
+  "name": "Almost50Shades",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "ngmap": "~1.7.11"
+  }
+}
