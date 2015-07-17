@@ -1,7 +1,13 @@
+
+
 app.factory('PolygonService', ['$resource', function($resource) {
-return $resource('/polygons/:id', null,
-    {
-        'update': { method:'PUT' }
-        
-    });
+
+	console.log("Sending a request");
+	return {
+		getPoly:function(){
+			console.log("THe service worls");
+		$resource('/api/polygons/:tlX/topY/:tlY', {tlX: '@tlX', tlY: '@tlY'});
+	}
+	}
 }]);
+

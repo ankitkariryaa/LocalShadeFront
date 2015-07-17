@@ -28,25 +28,29 @@
     <div id="header">
         <h1>Local Shade</h1>
     </div>
-    <section id="MainContent" ng-controller="GoogleMapController">
-        <div id="leftMap" > 
-               <map center="{{mapCenter}}" zoom="{{MapZoom}}">
-				 <marker ng-repeat="marker in markers" position="{{marker.position}}" icon="{{}}" title="{{marker.title}}"></marker>
-                 <shape name="polygon" ng-repeat="polygon in polygons" on-click="showArrays()" paths="{{polygon.coordinates}}" stroke-color="#FF0000" stroke-opacity="0.8" stroke-weight="2" fill-color="#FF0000" fill-opacity="0.35"> </shape>
-               </map>
-        </div>
-        <div id="right"> 
-          <p>Here goes the control of the application</p>
-          <input type="text" name="mapCenter" placeholder="Search" ng-model="mapCenter"></input>
-          <!-- <button class="btn btn-active" ng-click="MapCenterSearch()"> 
-          Search
-          </button> -->
-          <p>{{MapZoom}}</p>
-        </div>
+    <section id="MainContent" >
+      <div ng-controller="GoogleMapController">
+          <div id="leftMap" > 
+                 <map center="{{mapCenter}}" zoom="{{MapZoom}}" on-center_changed="centerChanged()" on-zoom_changed="centerChanged()">
+  				 <marker ng-repeat="marker in markers" position="{{marker.position}}" icon="{{}}" title="{{marker.title}}"></marker>
+                   <shape name="polygon" ng-repeat="polygon in polygons" on-click="showArrays()" paths="{{polygon.coordinates}}" stroke-color="#FF0000" stroke-opacity="0.8" stroke-weight="2" fill-color="#FF0000" fill-opacity="0.35"> </shape>
+                 </map>
+          </div>
+          <div id="rightCntrl"> 
+            <p>Here goes the control of the application</p>
+            <input type="text" name="mapCenter" placeholder="Search" ng-model="mapCenter"/>
+            <!-- <button class="btn btn-active" ng-click="MapCenterSearch()"> 
+            Search
+            </button> -->
+            <p>{{MapZoom}}</p>
+          </div>
+      </div>
     </section>
     <div id="footer"><p>&#64; Local Shade</p></div>
 </div>
 
 <script src="js/GoogleMapController.js"></script>
+<script src="js/Services.js"></script>
+
 </body>
 </html>
