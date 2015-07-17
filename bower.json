@@ -5,8 +5,9 @@
     "bootstrap": "latest",
     "font-awesome": "latest",
     "animate.css": "latest",
-    "angular": "latest",
-    "angular-route": "latest",
-    "ngmap": "~1.7.11"
+    "angular": "~1.4.3",
+    "angular-route": "~1.4.3",
+    "ngmap": "~1.7.11",
+    "angular-resource": "~1.4.3"
   }
 }

@@ -1,2 +1,2 @@
-var app = angular.module('LocalShadeApp', ['ngMap']);
+var app = angular.module('LocalShadeApp', ['ngMap','ngResource']);
   
