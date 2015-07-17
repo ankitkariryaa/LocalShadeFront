@@ -28,7 +28,7 @@
     <div id="header">
         <h1>Local Shade</h1>
     </div>
-    <div class="MainContent" ng-controller="GoogleMapController">
+    <section id="MainContent" ng-controller="GoogleMapController">
         <div id="leftMap" > 
                <map center="{{mapCenter}}" zoom="{{MapZoom}}">
 				 <marker ng-repeat="marker in markers" position="{{marker.position}}" icon="{{}}" title="{{marker.title}}"></marker>
@@ -43,8 +43,8 @@
           </button> -->
           <p>{{MapZoom}}</p>
         </div>
-    </div>
-    <div id="footer"><p>Footer</p></div>
+    </section>
+    <div id="footer"><p>&#64; Local Shade</p></div>
 </div>
 
 <script src="js/GoogleMapController.js"></script>
